@@ -43,7 +43,7 @@ sim:
 	./$(TEST_BIN) test/config-1.txt optimus_produder_consumer.fst
 
 wave:
-	gtkwave optimus_produder_consumer.fst > /dev/null 2>/dev/null &
+	surfer optimus_produder_consumer.fst > /dev/null 2>/dev/null &
 
 SV2V_OUT_FILES+=withtask
 # bug5: Optimus-BufferOverflow and Optimus-SignalConflict

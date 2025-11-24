@@ -21,7 +21,7 @@ sim:
 	@echo "You can compare the expected output and the actual output to find the difference"
 
 wave:
-	gtkwave test/*.vcd >/dev/null 2>/dev/null &
+	surfer test/*.vcd >/dev/null 2>/dev/null &
 
 # for resource-util synthesize
 TOP_MODULE_SYNTH=fft_wrapper

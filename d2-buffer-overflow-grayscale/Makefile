@@ -41,7 +41,7 @@ sim:
 	./$(TEST_BIN)
 
 wave:
-	gtkwave *.fst >/dev/null 2>/dev/null &
+	surfer *.fst >/dev/null 2>/dev/null &
 
 SV2V_OUT_FILES+=withtask
 # bug4: Grayscale-BufferOverflow

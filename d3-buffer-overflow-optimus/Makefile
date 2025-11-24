@@ -42,7 +42,7 @@ sim:
 	./$(TEST_BIN) test/config-2.txt optimus_overflow.fst
 
 wave:
-	gtkwave optimus_overflow.fst > /dev/null 2>/dev/null &
+	surfer optimus_overflow.fst > /dev/null 2>/dev/null &
 
 SV2V_OUT_FILES+=withtask
 # bug5: Optimus-BufferOverflow and Optimus-SignalConflict

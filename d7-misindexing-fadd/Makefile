@@ -43,8 +43,8 @@ sim:
 	./$(TEST_BIN)
 
 wave:
-	gtkwave grayscale_mux8_bug1.fst > /dev/null 2>/dev/null &
-	gtkwave grayscale_mux8_bug2.fst > /dev/null 2>/dev/null &
+	surfer grayscale_mux8_bug1.fst > /dev/null 2>/dev/null &
+	surfer grayscale_mux8_bug2.fst > /dev/null 2>/dev/null &
 
 # for resource-util synthesize
 TOP_MODULE=fadd_buggy

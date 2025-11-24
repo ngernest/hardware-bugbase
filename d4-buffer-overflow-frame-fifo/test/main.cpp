@@ -57,11 +57,11 @@ int main(int argc, char **argv) {
     for (int i = 0; i < 10; i++) {
         tb->clk = 1;
         tb->eval();
-        trace->dump(timestamp);
+        trace->dump(static_cast<vluint64_t>(timestamp));
         sc_time_step();
         tb->clk = 0;
         tb->eval();
-        trace->dump(timestamp);
+        trace->dump(static_cast<vluint64_t>(timestamp));
         sc_time_step();
     }
 
@@ -70,11 +70,11 @@ int main(int argc, char **argv) {
     for (int i = 0; i < 5; i++) {
         tb->clk = 1;
         tb->eval();
-        trace->dump(timestamp);
+        trace->dump(static_cast<vluint64_t>(timestamp));
         sc_time_step();
         tb->clk = 0;
         tb->eval();
-        trace->dump(timestamp);
+        trace->dump(static_cast<vluint64_t>(timestamp));
         sc_time_step();
     }
 
@@ -88,11 +88,11 @@ int main(int argc, char **argv) {
 
             tb->clk = 1;
             tb->eval();
-            trace->dump(timestamp);
+            trace->dump(static_cast<vluint64_t>(timestamp));
             sc_time_step();
             tb->clk = 0;
             tb->eval();
-            trace->dump(timestamp);
+            trace->dump(static_cast<vluint64_t>(timestamp));
             sc_time_step();
         }
 
@@ -104,11 +104,11 @@ int main(int argc, char **argv) {
 
         tb->clk = 1;
         tb->eval();
-        trace->dump(timestamp);
+        trace->dump(static_cast<vluint64_t>(timestamp));
         sc_time_step();
         tb->clk = 0;
         tb->eval();
-        trace->dump(timestamp);
+        trace->dump(static_cast<vluint64_t>(timestamp));
         sc_time_step();
 
         tb->s_axis_tdata = 0;
@@ -119,11 +119,11 @@ int main(int argc, char **argv) {
         for (int i = 0; i < 5; i++) {
             tb->clk = 1;
             tb->eval();
-            trace->dump(timestamp);
+            trace->dump(static_cast<vluint64_t>(timestamp));
             sc_time_step();
             tb->clk = 0;
             tb->eval();
-            trace->dump(timestamp);
+            trace->dump(static_cast<vluint64_t>(timestamp));
             sc_time_step();
         }
     }

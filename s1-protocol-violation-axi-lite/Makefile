@@ -38,8 +38,8 @@ sim:
 	./sources1_test
 
 wave:
-	gtkwave sources0_test.vcd >/dev/null 2>/dev/null &
-	gtkwave sources1_test.vcd >/dev/null 2>/dev/null &
+	surfer sources0_test.vcd >/dev/null 2>/dev/null &
+	surfer sources1_test.vcd >/dev/null 2>/dev/null &
 
 # for resouce-util synthesize
 RTL_SOURCES=sources.txt

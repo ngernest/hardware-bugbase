@@ -123,11 +123,11 @@ int main(int argc, char **argv) {
                 while (timestamp < end_timestamp) {
                     tb->pClk = 1;
                     tb->eval();
-                    trace->dump(timestamp);
+                    trace->dump(static_cast<vluint64_t>(timestamp));
                     sc_time_step();
                     tb->pClk = 0;
                     tb->eval();
-                    trace->dump(timestamp);
+                    trace->dump(static_cast<vluint64_t>(timestamp));
                     sc_time_step();
                 }
                 tb->pck_cp2af_softReset = 0;
@@ -277,17 +277,17 @@ int main(int argc, char **argv) {
         // 2. Verilator ASSUMES these bits are 0.
         zeroize_extra_bits(tb);
 		tb->eval();
-		trace->dump(timestamp);
+		trace->dump(static_cast<vluint64_t>(timestamp));
 		sc_time_step_half();
 
         tb->pClk = 1;
         tb->eval();
-        trace->dump(timestamp);
+        trace->dump(static_cast<vluint64_t>(timestamp));
         sc_time_step();
 
         tb->pClk = 0;
         tb->eval();
-        trace->dump(timestamp);
+        trace->dump(static_cast<vluint64_t>(timestamp));
         sc_time_step_half();
     }
 

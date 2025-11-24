@@ -46,7 +46,7 @@ sim:
 	@echo "Take a look at rtl/sdspi.v:740 and rtl/sdspi.v:774 for detail."
 
 wave:
-	gtkwave trace.vcd > /dev/null 2>/dev/null &
+	surfer trace.vcd > /dev/null 2>/dev/null &
 
 # for resource-util synthesize
 TOP_MODULE_SYNTH=sdspi_wrapper

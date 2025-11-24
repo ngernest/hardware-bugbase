@@ -47,7 +47,7 @@ sim: sdcard
 	timeout 3 ./$(TEST_BIN)
 
 wave:
-	gtkwave trace.vcd > /dev/null 2>/dev/null &
+	surfer trace.vcd > /dev/null 2>/dev/null &
 
 # for resource-util synthesize
 TOP_MODULE_SYNTH=sdspi_wrapper

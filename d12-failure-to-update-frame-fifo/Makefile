@@ -41,7 +41,7 @@ sim:
 	./$(TEST_BIN)
 
 wave:
-	gtkwave *.fst >/dev/null 2>/dev/null &
+	surfer *.fst >/dev/null 2>/dev/null &
 
 # for resource-util synthesize
 TOP_MODULE=axis_fifo
