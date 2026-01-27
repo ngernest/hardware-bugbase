@@ -185,7 +185,11 @@ module xlnxstream_2018_3 #
 		axis_tlast_delay <= 1'b0;
 	end else begin
 		axis_tvalid_delay <= axis_tvalid;
-		axis_tlast_delay <= axis_tlast;
+		// Note: this is the fixed code 
+		// The original code was just `axis_tlast_delay <= axis_tlast` without the if-statement 
+		if (!axis_tvalid_delay || M_AXIS_TREADY) begin 
+		  axis_tlast_delay <= axis_tlast;
+		end 
 	end
 
 

@@ -48,7 +48,13 @@ int main(int argc, char **argv) {
         goto save_trace_and_exit;
     }
 
-    while (!Verilated::gotFinish()) {
+    // Initial eval with clock=0 to capture reset/initial state
+    tb->clock = 0;
+    tb->eval();
+    trace->dump(static_cast<vluint64_t>(timestamp));
+    sc_time_step();
+
+    while (!Verilated::gotFinish() && tb->genclock) {
         tb->clock = 1;
         tb->eval();
         trace->dump(static_cast<vluint64_t>(timestamp));
